@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  x86:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /srv:/work
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    user: $UID:$GID
+    environment:
+      - ARCH=x86
+    hostname: kbuild
+    tty: true
+
+  arm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /srv:/work
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    user: $UID:$GID
+    environment:
+      - ARCH=arm
+      - CROSS_COMPILE=arm-linux-gnueabi-
+    hostname: kbuild
+    tty: true
+
+  arm64:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /srv:/work
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    user: $UID:$GID
+    environment:
+      - ARCH=arm64
+      - CROSS_COMPILE=aarch64-linux-gnu-
+    hostname: arm64
+    tty: true

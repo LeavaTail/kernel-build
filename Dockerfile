@@ -1,15 +1,7 @@
 FROM ubuntu:20.04
 LABEL maintainer "LeavaTail <starbow.duster@gmail.com>"
 
-ENV ARCH x86
-#ENV ARCH arm
-#ENV ARCH arm64
-
-#ENV CROSS_COMPILE arm-linux-gnueabi-
-#ENV CROSS_COMPILE aarch64-linux-gnu-
-
 WORKDIR /work
-COPY ./setup-${ARCH}.sh /work
 
 RUN set -x && \
     apt-get update && \
@@ -27,7 +19,9 @@ RUN set -x && \
         cpio \
         unzip \
         rsync \
-    && ./setup-${ARCH}.sh \
+        build-essential \
+        gcc-arm-linux-gnueabi \
+        gcc-aarch64-linux-gnu \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
