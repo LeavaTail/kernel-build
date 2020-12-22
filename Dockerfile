@@ -20,6 +20,7 @@ RUN set -x && \
         unzip \
         rsync \
         build-essential \
+        python3 \
         gcc-arm-linux-gnueabi \
         gcc-aarch64-linux-gnu \
     && apt-get clean \
