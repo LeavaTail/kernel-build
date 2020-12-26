@@ -21,8 +21,8 @@ RUN set -x && \
         rsync \
         build-essential \
         python3 \
-        gcc-arm-linux-gnueabi \
-        gcc-aarch64-linux-gnu \
+        crossbuild-essential-armhf \
+        crossbuild-essential-arm64 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
