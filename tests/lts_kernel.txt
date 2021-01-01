@@ -1,5 +1,1 @@
-linux-5.4.51
-linux-4.19.132
-linux-4.14.188
-linux-4.9.230
-linux-4.4.230
+linux-5.10.3

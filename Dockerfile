@@ -3,6 +3,8 @@ LABEL maintainer "LeavaTail <starbow.duster@gmail.com>"
 
 WORKDIR /work
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN set -x && \
     apt-get update && \
     apt-get install -y \
@@ -20,8 +22,9 @@ RUN set -x && \
         unzip \
         rsync \
         build-essential \
-        gcc-arm-linux-gnueabi \
-        gcc-aarch64-linux-gnu \
+        python3 \
+        crossbuild-essential-armhf \
+        crossbuild-essential-arm64 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
