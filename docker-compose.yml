@@ -26,7 +26,7 @@ services:
     user: $UID:$GID
     environment:
       - ARCH=arm
-      - CROSS_COMPILE=arm-linux-gnueabi-
+      - CROSS_COMPILE=arm-linux-gnueabihf-
     hostname: kbuild
     tty: true
 
