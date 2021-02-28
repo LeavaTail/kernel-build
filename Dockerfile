@@ -24,6 +24,7 @@ RUN set -x && \
         rsync \
         build-essential \
         python3 \
+        kmod \
         crossbuild-essential-armhf \
         crossbuild-essential-arm64 \
     && apt-get clean \
