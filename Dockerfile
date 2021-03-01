@@ -3,6 +3,7 @@ LABEL maintainer "LeavaTail <starbow.duster@gmail.com>"
 
 WORKDIR /work
 
+COPY dists/setup.py /usr/local/bin/
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -x && \
@@ -23,6 +24,7 @@ RUN set -x && \
         rsync \
         build-essential \
         python3 \
+        kmod \
         crossbuild-essential-armhf \
         crossbuild-essential-arm64 \
     && apt-get clean \
