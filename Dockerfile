@@ -3,12 +3,12 @@ LABEL maintainer "LeavaTail <starbow.duster@gmail.com>"
 
 WORKDIR /work
 
-COPY dists/setup.py /usr/local/bin/
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -x && \
     apt-get update && \
     apt-get install -y \
+        sudo \
         git \
         bc \
         bison \
