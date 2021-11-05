@@ -6,9 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /srv:/work
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
+      - /etc/sudoers:/etc/sudoers:ro
+      - /etc/shadow:/etc/shadow:ro
+      - $HOME:/home/$USER/
     user: $UID:$GID
     environment:
       - ARCH=x86
@@ -20,13 +22,16 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /srv:/work
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
+      - /etc/sudoers:/etc/sudoers:ro
+      - /etc/shadow:/etc/shadow:ro
+      - $HOME:/home/$USER/
     user: $UID:$GID
     environment:
       - ARCH=arm
       - CROSS_COMPILE=arm-linux-gnueabihf-
+      - KERNEL=kernel7l
     hostname: kbuild
     tty: true
 
@@ -35,12 +40,15 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /srv:/work
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
+      - /etc/sudoers:/etc/sudoers:ro
+      - /etc/shadow:/etc/shadow:ro
+      - $HOME:/home/$USER/
     user: $UID:$GID
     environment:
       - ARCH=arm64
       - CROSS_COMPILE=aarch64-linux-gnu-
+      - KERNEL=kernel8
     hostname: arm64
     tty: true

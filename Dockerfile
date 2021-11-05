@@ -3,12 +3,14 @@ LABEL maintainer "LeavaTail <starbow.duster@gmail.com>"
 
 WORKDIR /work
 
-COPY dists/setup.py /usr/local/bin/
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ Asia/Tokyo
 
 RUN set -x && \
     apt-get update && \
     apt-get install -y \
+        sudo \
+        tzdata \
         git \
         bc \
         bison \
