@@ -19,7 +19,7 @@ A repository contained docker image for 3 architecture.
 - arm64
 
 This docker images shared home directory (current process) with host environment.<br>
-In other word, these container has same user account and home directory.
+In other word, **these container has same user account and home directory.**
 
 The configuration below files are shared.
 
