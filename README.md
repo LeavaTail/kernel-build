@@ -48,7 +48,7 @@ Please see official site
 **Create and start-up**
 
 ```sh
-$ docker-compose up -d
+$ env UID=${UID} GID=${GID} docker-compose up -d
 ```
 
 **Enter Container**
