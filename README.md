@@ -48,13 +48,13 @@ Please see official site
 **Create and start-up**
 
 ```sh
-$ env UID=${UID} GID=${GID} docker-compose up -d
+env UID=${UID} GID=${GID} docker-compose up -d
 ```
 
 **Enter Container**
 
 ```sh
-$ docker-compose exec x86 /bin/bash
+docker-compose exec x86 /bin/bash
 ```
 
 :bulb: You can select `arm` or `arm64` instead of `x86`
@@ -62,7 +62,7 @@ $ docker-compose exec x86 /bin/bash
 **Update Docker image**
 
 ```sh
-$ docker-compose up -d --build
+docker-compose up -d --build
 ```
 
 ## Authors
