@@ -1,8 +1,6 @@
 FROM ubuntu:20.04
 LABEL maintainer "LeavaTail <starbow.duster@gmail.com>"
 
-WORKDIR /work
-
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ Asia/Tokyo
 
