@@ -54,10 +54,8 @@ Please see official site if you have not installed yet.
 ### Create and start-up
 
 ```sh
-env UID=${UID} GID=${GID} docker-compose up -d
+docker-compose up -d
 ```
-
-:warning: Need to `UID` and `GID`
 
 ### Enter Container
 

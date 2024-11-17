@@ -8,9 +8,7 @@ services:
       - /etc/group:/etc/group:ro
       - /etc/sudoers:/etc/sudoers:ro
       - /etc/shadow:/etc/shadow:ro
-      - $HOME:/home/$USER/
       - /srv:/srv
-    user: $UID:$GID
     environment:
       - ARCH=x86
     hostname: kbuild
@@ -25,9 +23,7 @@ services:
       - /etc/group:/etc/group:ro
       - /etc/sudoers:/etc/sudoers:ro
       - /etc/shadow:/etc/shadow:ro
-      - $HOME:/home/$USER/
       - /srv:/srv
-    user: $UID:$GID
     environment:
       - ARCH=arm
       - CROSS_COMPILE=arm-linux-gnueabihf-
@@ -44,9 +40,7 @@ services:
       - /etc/group:/etc/group:ro
       - /etc/sudoers:/etc/sudoers:ro
       - /etc/shadow:/etc/shadow:ro
-      - $HOME:/home/$USER/
       - /srv:/srv
-    user: $UID:$GID
     environment:
       - ARCH=arm64
       - CROSS_COMPILE=aarch64-linux-gnu-
