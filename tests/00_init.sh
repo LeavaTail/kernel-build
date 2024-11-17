@@ -10,4 +10,5 @@ for lts in "${file[@]}"; do
 		wget https://cdn.kernel.org/pub/linux/kernel/v`echo ${lts:6:1}`.x/${lts}.tar.xz	
 	fi
 	tar xf ${lts}.tar.xz
+	chmod 777 -R ${lts}
 done
