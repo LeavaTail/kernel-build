@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /srv:/srv
+      - /work:/work
     environment:
       - ARCH=x86
     hostname: kbuild
@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /srv:/srv
+      - /work:/work
     environment:
       - ARCH=arm
       - CROSS_COMPILE=arm-linux-gnueabihf-
@@ -28,7 +28,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /srv:/srv
+      - /work:/work
     environment:
       - ARCH=arm64
       - CROSS_COMPILE=aarch64-linux-gnu-

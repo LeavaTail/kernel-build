@@ -20,7 +20,7 @@ A repository contained docker image based on Ubuntu 20.04 for 3 architecture.
 
 The configuration below files/directories are shared.
 
-- /srv
+- /work
 
 These has already installed package to build linux kernel.
 

@@ -37,5 +37,9 @@ RUN set -x && \
 RUN groupadd -g "${GROUP_ID}" "${USER_NAME}" && \
     useradd -l -u "${USER_ID}" -m "${USER_NAME}" -g "${USER_NAME}"
 
+RUN mkdir -p /work && chown -R ${USER_NAME}:${USER_NAME} /work
+
+WORKDIR /work
+
 USER ${USER_NAME}
 CMD ["/bin/bash"]
