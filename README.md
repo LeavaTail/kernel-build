@@ -4,11 +4,11 @@ A repository contained docker image build linux kernel
 
 ## Table of Contents
 
-- [Description](#Description)
-- [Requirements](#Requirements)
-- [Prerequisite](#Prerequisite)
-- [Usage](#Usage)
-- [Authors](#Authors)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Prerequisite](#prerequisite)
+- [Usage](#usage)
+- [Authors](#authors)
 
 ## Description
 
