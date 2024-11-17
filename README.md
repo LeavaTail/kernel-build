@@ -18,15 +18,8 @@ A repository contained docker image based on Ubuntu 20.04 for 3 architecture.
 - arm
 - arm64
 
-This docker images shared home directory (current process) with host environment.
-(In other word, **these image has same user account and home directory.**)
-
 The configuration below files/directories are shared.
 
-- /etc/passwd
-- /etc/group
-- /etc/sudoers
-- /etc/shadow
 - /srv
 
 These has already installed package to build linux kernel.
