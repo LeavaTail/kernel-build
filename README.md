@@ -54,13 +54,13 @@ Please see official site if you have not installed yet.
 ### Create and start-up
 
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Enter Container
 
 ```sh
-docker-compose exec x86 /bin/bash
+docker compose exec x86 /bin/bash
 ```
 
 :bulb: You can select `arm` or `arm64` instead of `x86`
@@ -68,13 +68,13 @@ docker-compose exec x86 /bin/bash
 ### Update Docker image
 
 ```sh
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ### Remove images
 
 ```sh
-docker-compose down --rmi all
+docker compose down --rmi all
 ```
 
 ## Authors
