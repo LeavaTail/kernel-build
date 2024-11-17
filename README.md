@@ -6,7 +6,7 @@ A repository contained docker image build linux kernel
 
 - [Description](#Description)
 - [Requirements](#Requirements)
-- [Prerequisite](Prerequisite)
+- [Prerequisite](#Prerequisite)
 - [Usage](#Usage)
 - [Authors](#Authors)
 
